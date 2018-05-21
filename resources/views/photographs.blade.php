@@ -4,7 +4,12 @@
 <h1 class="title">Bilder der Fotografin</h1>
 @foreach ($file_paths as $image)
   <a href={{$image}} data-lightbox="guest_photos">
-  <img src={{$image}}>
+      <?php
+      $image_thumb = $image;
+      $image_thumb = str_replace('.png', '_thumb.png', $image);
+      $image_thumb = str_replace('/photograph', '/thumb', $image_thumb);
+    ?>
+    <img src={{$image_thumb}}>
   </a>
 @endforeach
 
