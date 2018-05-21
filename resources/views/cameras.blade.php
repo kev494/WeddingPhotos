@@ -1,5 +1,10 @@
 @extends('layouts.layout')
 @section('content')
-<p> cameras </p>
-
+</br>
+<h1 class="title">Bilder von Einwegkameras</h1>
+@foreach ($file_paths as $image)
+  <a href={{$image}} data-lightbox="guest_photos">
+  <img src={{$image}}>
+  </a>
+@endforeach
 @endsection

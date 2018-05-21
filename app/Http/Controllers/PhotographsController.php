@@ -8,8 +8,13 @@ use Illuminate\Support\Facades\Storage;
 class PhotographsController extends Controller
 {
     public function index() {
-        //$testphoto = Storage::get('testphoto.jpeg');
-        //dd($testphoto);
-        return view('photographs');
+        $files = scandir(storage_path() . '/app/public/photograph/') ;
+        $file_paths = array();
+        foreach ($files as $file) {
+            if(strcmp($file, ".") != 0 && strcmp($file, "..") != 0){
+                array_push($file_paths, asset(Storage::url('photograph/'.$file)));
+            }
+        }
+        return view('photographs', compact('file_paths'));
     }
 }

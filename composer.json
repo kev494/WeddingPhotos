@@ -9,7 +9,9 @@
         "fideloper/proxy": "^4.0",
         "laravel-frontend-presets/bulma": "^1.7",
         "laravel/framework": "5.6.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "intervention/image": "^2.3",
+        "laracasts/flash": "^3.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

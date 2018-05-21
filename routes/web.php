@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Route::get('/photographs', 'PhotographsController@index');
 Route::get('/guests', 'GuestsController@index');
+Route::post('/guests', 'GuestsController@upload');
 Route::get('/cameras', 'CamerasController@index');

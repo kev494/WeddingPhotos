@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @stack('scripts-before')
     
     <script src="{{mix('js/app.js')}}"></script>
@@ -19,7 +20,16 @@
         @yield('content')
     </div>
 
-    <script src="{{asset('js/lightbox.min.js')}}"></script>
+    <script src="{{asset('js/lightbox-plus-jquery.js')}}"></script>
+    <script src="{{asset('js/upload.js')}}"></script>
 </body>
-
+<footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered is-fixed-bottom">
+            <p>
+                <label class="label is-small"> © by Samantha Howlett and Kevin Schaefer</label>
+            </p>
+          </div>
+        </div>
+      </footer>
 </html>
