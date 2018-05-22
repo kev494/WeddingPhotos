@@ -1,5 +1,5 @@
 </<!doctype html>
-<html class="has-navbar-fixed-top">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
