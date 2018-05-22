@@ -5,11 +5,14 @@
 </br>
 <h1 class="title">Bilder der Gäste</h1>
 
-<div class="field">
-  <div class="file is-primary is-medium">
+<div class="field is-clearfix">
+  <div class="file is-primary is-medium is-pulled-right">
     <label class="file-label">
-      <input class="file-input" id="upload_new_file" type="file" name="upload_new_file">
+      <input class="file-input" id="upload_new_file" type="file" name="upload_new_file[]" multiple>
       <span class="file-cta">
+          <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
         <span class="file-label">
           Bild hochladen
         </span>
@@ -18,14 +21,18 @@
   </div>
 </div>
 @foreach ($file_paths as $image)
+
   <a href={{$image}} data-lightbox="guest_photos">
+    
     <?php
       $image_thumb = $image;
       $image_thumb = str_replace('.png', '_thumb.png', $image);
       $image_thumb = str_replace('/guest', '/thumb', $image_thumb);
     ?>
-    <img src={{$image_thumb}}>
+    <img src={{$image_thumb}} vspace="2">
   </a>
+  
+
 @endforeach
 </form>
 

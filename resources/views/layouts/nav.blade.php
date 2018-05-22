@@ -1,7 +1,7 @@
 <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <div class="navbar-item">
-        <h5 class="title is-5 has-text-white">Sandra's & Thommy's Hochzeitfotos</h5>
+        <h5 class="title is-5 has-text-white is-italic">Sandras & Thommys Hochzeitfotos</h5>
             
         </div>
     </div>

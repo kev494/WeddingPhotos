@@ -23,17 +23,21 @@ class GuestsController extends Controller
     public function upload(Request $request) {
         $img_height = 200;
         if ($request->hasFile('upload_new_file')) {
-            $file = $request->file('upload_new_file'); 
-            $timestamp = date("Y-m-d_H-i-s");
-            $path = 'public/guest/' . $timestamp . '.png';
-            $pathThumb = 'public/thumb/' . $timestamp . '_thumb.png';
-            $img = Image::make($file)->encode('png');
-            $img_PercHeight = $img_height / $img->height();
-            $img_width = $img->width() * $img_PercHeight;
-            Storage::put($path, $img);
-            Storage::put($pathThumb, $img->resize($img_width, $img_height)->encode('png'));
+            $files = $request->file('upload_new_file'); 
+            foreach($files as $file) {
+                $uid = uniqid();
+                $path = 'public/guest/' . $uid . '.png';
+                $pathThumb = 'public/thumb/' . $uid . '_thumb.png';
+                $img = Image::make($file)->encode('png');
+                $img_PercHeight = $img_height / $img->height();
+                $img_width = $img->width() * $img_PercHeight;
+                Storage::put($path, $img);
+                Storage::put($pathThumb, $img->resize($img_width, $img_height)->encode('png'));
+            }
+            flash('Das Bild wurde hochgeladen')->success()->important();
+        
         }
-        flash('Das Bild wurde hochgeladen', 'success');
+        
         return redirect()->back();
     }
 }
