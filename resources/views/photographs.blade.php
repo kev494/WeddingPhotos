@@ -9,7 +9,7 @@
       $image_thumb = str_replace('.png', '_thumb.png', $image);
       $image_thumb = str_replace('/photograph', '/thumb', $image_thumb);
     ?>
-    <img src={{$image_thumb}}>
+    <img src={{$image_thumb}} vspace="2">
   </a>
 @endforeach
 
