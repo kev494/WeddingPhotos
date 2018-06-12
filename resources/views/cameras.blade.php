@@ -2,8 +2,12 @@
 @section('content')
 </br>
 <h1 class="title">Bilder von Einwegkameras</h1>
+<section
+      data-featherlight-gallery
+      data-featherlight-filter="a"
+    >
 @foreach ($file_paths as $image)
-  <a href={{$image}} data-lightbox="guest_photos">
+  <a href={{$image}}>
       <?php
       $image_thumb = $image;
       $image_thumb = str_replace('.png', '_thumb.png', $image);
@@ -12,4 +16,5 @@
     <img src={{$image_thumb}} vspace="2">
   </a>
 @endforeach
+</section>
 @endsection

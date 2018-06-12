@@ -16,8 +16,11 @@
     <link href="{{asset('css/lightbox.css')}}" rel="stylesheet">
     <!-- default (bulma) css -->
     <link href="/css/app.css" rel="stylesheet">
+
+    <!-- noelboss gallery css -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <title>Hochzeitsfotos</title>
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />    <title>Hochzeitsfotos</title>
 </head>
 <body>
     
@@ -43,6 +46,11 @@
         </script>
     <!-- upload js for not submitting form to upload -->
     <script src="{{asset('js/upload.js')}}"></script>
+
+    <!-- noelboss lightbox js -->
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+	<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 <footer class="footer">
         <div class="container">

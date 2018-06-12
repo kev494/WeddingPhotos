@@ -20,9 +20,13 @@
     </label>
   </div>
 </div>
+<section
+      data-featherlight-gallery
+      data-featherlight-filter="a"
+    >
 @foreach ($file_paths as $image)
 
-  <a href={{$image}} data-lightbox="guest_photos">
+  <a href={{$image}}>
     
     <?php
       $image_thumb = $image;
@@ -34,6 +38,7 @@
   
 
 @endforeach
+</section>
 </form>
 
 @endsection
